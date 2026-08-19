@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f9fc;
+    color: #10244a;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar {
+    height: 82px;
+    background: white;
+    border-bottom: 1px solid #e5e9f0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    padding: 0 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo span {
+    width: 40px;
+    height: 40px;
+    background: #1d4382;
+    color: white;
+    border-radius: 11px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #56647a;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+nav a:hover,
+nav a.active {
+    color: #1760e8;
+}
+
+.talk-btn {
+    background: #1d4382;
+    color: white;
+    padding: 14px 24px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 25px;
+}
+
+.contact-hero {
+    background: #1d4382;
+    color: white;
+    padding: 100px 30px;
+}
+
+.contact-hero > div {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.contact-hero p:first-child {
+    color: #8fc9ff;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.contact-hero h1 {
+    font-size: clamp(45px, 7vw, 80px);
+    line-height: 1;
+    margin: 18px 0 25px;
+}
+
+.contact-hero h1 span {
+    color: #7fc4ff;
+}
+
+.contact-hero p:last-child {
+    max-width: 650px;
+    color: #dce8ff;
+    font-size: 17px;
+}
+
+.contact-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 90px 30px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr .8fr;
+    gap: 70px;
+}
+
+.label {
+    color: #1760e8;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.contact-info h2 {
+    font-size: 45px;
+    line-height: 1.1;
+    margin: 15px 0 45px;
+}
+
+.contact-item {
+    padding: 20px 0;
+    border-bottom: 1px solid #e1e6ed;
+}
+
+.contact-item span {
+    display: block;
+    color: #7b879b;
+    font-size: 10px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.contact-item a,
+.contact-item strong {
+    font-size: 16px;
+}
+
+.contact-item a {
+    color: #1760e8;
+}
+
+.message-card {
+    background: white;
+    border: 1px solid #e0e6ef;
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 20px 50px rgba(20,45,90,.08);
+}
+
+.message-card h3 {
+    font-size: 28px;
+    margin: 18px 0 10px;
+}
+
+.message-card p:not(.label) {
+    color: #6c7b91;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.send-btn {
+    display: inline-block;
+    background: #1d4382;
+    color: white;
+    padding: 15px 22px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.map-section {
+    margin-top: 100px;
+}
+
+.map-section h2 {
+    font-size: 40px;
+    margin: 10px 0 25px;
+}
+
+.map-section iframe {
+    width: 100%;
+    height: 380px;
+    border: 0;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(20,45,90,.08);
+}
+
+footer {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px;
+
+    border-top: 1px solid #e1e6ed;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: #718097;
+    font-size: 13px;
+}
+
+footer a {
+    color: #1760e8;
+}
+
+@media(max-width:800px) {
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 82px;
+        left: 0;
+        right: 0;
+
+        background: white;
+        padding: 25px;
+
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    .talk-btn {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+}
+
+@media(max-width:500px) {
+
+    .contact-hero {
+        padding: 70px 20px;
+    }
+
+    .contact-container {
+        padding: 65px 20px;
+    }
+
+    .contact-info h2 {
+        font-size: 38px;
+    }
+
+}
