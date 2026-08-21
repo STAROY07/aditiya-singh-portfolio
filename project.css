@@ -1,0 +1,334 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f9fc;
+    color: #10244a;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    height: 82px;
+    background: white;
+    border-bottom: 1px solid #e5e9f0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    padding: 0 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo span {
+    width: 40px;
+    height: 40px;
+    background: #1d4382;
+    color: white;
+    border-radius: 11px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    font-size: 14px;
+    font-weight: bold;
+    color: #56647a;
+}
+
+nav a:hover,
+nav a.active {
+    color: #1760e8;
+}
+
+.talk-btn {
+    background: #1d4382;
+    color: white;
+    padding: 14px 24px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 25px;
+}
+
+/* ================= HERO ================= */
+
+.projects-hero {
+    background: #1d4382;
+    color: white;
+    padding: 100px 30px;
+}
+
+.projects-hero > div {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.projects-hero p:first-child {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #8fc9ff;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.projects-hero h1 {
+    font-size: clamp(50px, 7vw, 85px);
+    line-height: 0.98;
+}
+
+.projects-hero h1 span {
+    color: #7fc4ff;
+}
+
+.projects-hero p:last-child {
+    max-width: 650px;
+    color: #dce8ff;
+    font-size: 17px;
+    margin-top: 25px;
+    line-height: 1.6;
+}
+
+/* ================= PROJECT SECTION ================= */
+
+.projects-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 80px 30px;
+}
+
+.project-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    align-items: stretch;
+}
+
+/* ================= PROJECT CARD ================= */
+
+.project-card {
+    width: 100%;
+    background: white;
+    border: 1px solid #e0e6ef;
+    border-radius: 20px;
+    padding: 32px;
+    min-height: 340px;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 25px 50px rgba(20, 45, 90, 0.10);
+}
+
+.project-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.number {
+    color: #1760e8;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.type {
+    color: #7b879b;
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.project-card h2 {
+    font-size: 32px;
+    margin: 18px 0 12px;
+}
+
+.project-card p {
+    color: #63738b;
+    font-size: 14px;
+    max-width: 500px;
+    line-height: 1.7;
+}
+
+/* ================= TAGS ================= */
+
+.tags {
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+    margin-top: 22px;
+}
+
+.tags span {
+    background: #edf3fc;
+    color: #50627d;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+/* ================= PROJECT LINKS ================= */
+
+.project-links {
+    margin-top: auto;
+    padding-top: 25px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 28px;
+    width: 100%;
+}
+
+.project-links a {
+    margin: 0;
+    padding: 0;
+
+    display: inline-flex;
+    align-items: center;
+
+    color: #1760e8;
+    font-size: 13px;
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+.project-links a:hover {
+    color: #0d4fc7;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px;
+
+    border-top: 1px solid #e1e6ed;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: #718097;
+    font-size: 13px;
+}
+
+footer a {
+    color: #1760e8;
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 800px) {
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 82px;
+        left: 0;
+        right: 0;
+
+        background: white;
+        padding: 25px;
+
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    .talk-btn {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 500px) {
+
+    .projects-hero {
+        padding: 70px 20px;
+    }
+
+    .projects-container {
+        padding: 60px 20px;
+    }
+
+    .project-card {
+        padding: 25px;
+    }
+
+    .project-card h2 {
+        font-size: 27px;
+    }
+
+    .project-links {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+}
